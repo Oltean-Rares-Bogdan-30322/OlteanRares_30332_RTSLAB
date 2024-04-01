@@ -1,5 +1,18 @@
 public class Main {
+
+    private static boolean stopThreads = false;
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        FileService service = new FileService("messages.txt");
+
+        WThread writer = new WThread(service);
+        RThread reader = new RThread(service);
+
+        writer.start();
+        reader.start();
+    }
+
+    public static boolean isStopThreads() {
+        return stopThreads;
     }
 }
