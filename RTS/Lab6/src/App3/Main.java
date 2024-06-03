@@ -95,7 +95,7 @@ class ExecutionSecThread extends Thread {
 
 public class Main {
     public static void main(String[] args) {
-        CountDownLatch countDownLatch = new CountDownLatch(3);
+        CountDownLatch countDownLatch = new CountDownLatch(4);
         Integer monitor = 1;
         Integer monitor2 = 1;
 
